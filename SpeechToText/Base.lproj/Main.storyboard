@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sg7-y7-CiX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiL-DC-1A1">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kiL-DC-1A1" secondAttribute="height" multiplier="1:1" id="zCq-71-6H5"/>
+                                </constraints>
+                                <state key="normal" image="voice_contest"/>
+                                <connections>
+                                    <action selector="speakTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0uO-LV-HHq"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2qq-qC-OjL">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="LQp-Zr-Azg"/>
+                                    <constraint firstAttribute="height" constant="220" id="mPw-3n-4t4"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oTP-sh-guD">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oTP-sh-guD" secondAttribute="bottom" constant="40" id="4qD-l0-F1s">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="kiL-DC-1A1" firstAttribute="centerX" secondItem="sg7-y7-CiX" secondAttribute="centerX" id="Dla-ZR-3Eu"/>
+                            <constraint firstItem="kiL-DC-1A1" firstAttribute="width" secondItem="2qq-qC-OjL" secondAttribute="width" multiplier="44:73" id="Fam-Gk-cga"/>
+                            <constraint firstItem="oTP-sh-guD" firstAttribute="top" secondItem="2qq-qC-OjL" secondAttribute="bottom" constant="80" id="H08-r2-Q9K">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="2qq-qC-OjL" firstAttribute="centerX" secondItem="sg7-y7-CiX" secondAttribute="centerX" id="RTH-W0-SEm"/>
+                            <constraint firstItem="oTP-sh-guD" firstAttribute="leading" secondItem="sg7-y7-CiX" secondAttribute="leadingMargin" constant="40" id="SKS-PT-3Of">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="kiL-DC-1A1" firstAttribute="centerY" secondItem="2qq-qC-OjL" secondAttribute="centerY" id="Saa-MQ-z9p"/>
+                            <constraint firstItem="kiL-DC-1A1" firstAttribute="centerX" secondItem="2qq-qC-OjL" secondAttribute="centerX" id="Sl2-y3-mYL"/>
+                            <constraint firstItem="2qq-qC-OjL" firstAttribute="centerY" secondItem="sg7-y7-CiX" secondAttribute="centerY" constant="-80" id="WnI-yu-kXh"/>
+                            <constraint firstItem="kiL-DC-1A1" firstAttribute="height" secondItem="2qq-qC-OjL" secondAttribute="height" multiplier="44:73" id="fZK-JB-yr1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oTP-sh-guD" secondAttribute="trailing" constant="40" id="pxB-cB-0ih">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="kiL-DC-1A1" firstAttribute="centerY" secondItem="sg7-y7-CiX" secondAttribute="centerY" constant="-80" id="scq-fI-d2g"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Saa-MQ-z9p"/>
+                                <exclude reference="Sl2-y3-mYL"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="animationImageView" destination="2qq-qC-OjL" id="bKp-Ca-026"/>
+                        <outlet property="resultTextView" destination="oTP-sh-guD" id="rxo-uD-oFX"/>
+                        <outlet property="speakButton" destination="kiL-DC-1A1" id="pq5-NB-uav"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.609375" y="35.13909224011713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="voice_contest" width="133" height="133"/>
+    </resources>
+</document>
