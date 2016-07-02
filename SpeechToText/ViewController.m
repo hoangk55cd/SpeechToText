@@ -10,6 +10,7 @@
 #import <Speech/Speech.h>
 #import "UIImage+animatedGIF.h"
 #import <AVFoundation/AVFoundation.h>
+#import "MBProgressHUD.h"
 
 @interface ViewController () {
     // UI
@@ -51,9 +52,14 @@
     [super viewDidAppear:animated];
    
     audioEngine = [[AVAudioEngine alloc] init];
+    
     NSLocale *local =[[NSLocale alloc] initWithLocaleIdentifier:@"en-US"];
     speechRecognizer = [[SFSpeechRecognizer alloc] initWithLocale:local];
     
+    
+    for (NSLocale *locate in [SFSpeechRecognizer supportedLocales]) {
+        NSLog(@"%@", [locate localizedStringForCountryCode:locate.countryCode]);
+    }
     // Check Authorization Status
     // Make sure you add "Privacy - Microphone Usage Description" key and reason in Info.plist to request micro permison
     // And "NSSpeechRecognitionUsageDescription" key for requesting Speech recognize permison
@@ -99,8 +105,6 @@
         else {
             NSLog(@"Error, %@", error.description);
         }
-        
-        
     }];
 }
 
@@ -122,9 +126,9 @@
     [session setActive:TRUE withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
     
     inputNode = audioEngine.inputNode;
-    
+
     recognitionRequest = [[SFSpeechAudioBufferRecognitionRequest alloc] init];
-    recognitionRequest.shouldReportPartialResults = YES;
+    recognitionRequest.shouldReportPartialResults = NO;
     recognitionRequest.detectMultipleUtterances = YES;
     
     AVAudioFormat *format = [inputNode outputFormatForBus:0];
@@ -142,7 +146,9 @@
 
 - (IBAction)speakTap:(id)sender {
     if (audioEngine.isRunning) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         recognitionTask =[speechRecognizer recognitionTaskWithRequest:recognitionRequest resultHandler:^(SFSpeechRecognitionResult * _Nullable result, NSError * _Nullable error) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             if (result != nil) {
                 NSString *transcriptText = result.bestTranscription.formattedString;
                 resultTextView.text = transcriptText;

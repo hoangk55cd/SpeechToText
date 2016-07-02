@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E46EC5F41D276B530059CF30 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E46EC5F31D276B530059CF30 /* MBProgressHUD.m */; };
 		E4B2436D1D237824000D6525 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B2436C1D237824000D6525 /* main.m */; };
 		E4B243701D237824000D6525 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B2436F1D237824000D6525 /* AppDelegate.m */; };
 		E4B243731D237824000D6525 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B243721D237824000D6525 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E46EC5F21D276B530059CF30 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E46EC5F31D276B530059CF30 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		E4B243681D237824000D6525 /* SpeechToText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechToText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B2436C1D237824000D6525 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4B2436E1D237824000D6525 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 		E4BB5A451D23CD1C004B0D99 /* Utis */ = {
 			isa = PBXGroup;
 			children = (
+				E46EC5F21D276B530059CF30 /* MBProgressHUD.h */,
+				E46EC5F31D276B530059CF30 /* MBProgressHUD.m */,
 				E4BB5A461D23CD1C004B0D99 /* UIImage+animatedGIF.h */,
 				E4BB5A471D23CD1C004B0D99 /* UIImage+animatedGIF.m */,
 			);
@@ -175,6 +180,7 @@
 			files = (
 				E4B243731D237824000D6525 /* ViewController.m in Sources */,
 				E4BB5A481D23CD1C004B0D99 /* UIImage+animatedGIF.m in Sources */,
+				E46EC5F41D276B530059CF30 /* MBProgressHUD.m in Sources */,
 				E4B243701D237824000D6525 /* AppDelegate.m in Sources */,
 				E4B2436D1D237824000D6525 /* main.m in Sources */,
 			);
